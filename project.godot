@@ -11,8 +11,13 @@ config_version=5
 [application]
 
 config/name="Modular Systems"
+run/main_scene="uid://cgavf4yykvrif"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+InputHandler="*res://core/autoloads/InputHandler.gd"
 
 [rendering]
 

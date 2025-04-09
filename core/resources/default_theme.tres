@@ -1,0 +1,59 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bsbjx34pneovs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bb50b"]
+bg_color = Color(0, 0.688971, 0.71754, 1)
+border_width_bottom = 5
+border_color = Color(4.13924e-06, 0.62567, 0.650658, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0, 0, 0, 0.286275)
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_a47im"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a47im"]
+bg_color = Color(0, 0.688971, 0.71754, 1)
+border_width_bottom = 5
+border_color = Color(4.13924e-06, 0.62567, 0.650658, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0, 0, 0, 0.286275)
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xkjnl"]
+bg_color = Color(0, 0.688971, 0.71754, 1)
+border_width_top = 5
+border_color = Color(0, 0.627451, 0.65098, 0)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0, 0, 0, 0.286275)
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bwxd8"]
+bg_color = Color(0.442315, 0.683211, 0.695113, 1)
+corner_radius_top_left = 25
+corner_radius_top_right = 25
+corner_radius_bottom_right = 25
+corner_radius_bottom_left = 25
+shadow_color = Color(0, 0, 0, 0.286275)
+shadow_size = 2
+shadow_offset = Vector2(0, 2)
+
+[resource]
+Button/font_sizes/font_size = 16
+Button/fonts/font = null
+Button/styles/disabled = SubResource("StyleBoxFlat_bb50b")
+Button/styles/focus = SubResource("StyleBoxEmpty_a47im")
+Button/styles/hover = SubResource("StyleBoxFlat_a47im")
+Button/styles/normal = SubResource("StyleBoxFlat_a47im")
+Button/styles/pressed = SubResource("StyleBoxFlat_xkjnl")
+Panel/styles/panel = SubResource("StyleBoxFlat_bwxd8")

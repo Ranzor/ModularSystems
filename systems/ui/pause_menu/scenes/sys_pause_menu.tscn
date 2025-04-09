@@ -1,27 +1,48 @@
-[gd_scene load_steps=2 format=3 uid="uid://dy1syckxeja68"]
+[gd_scene load_steps=3 format=3 uid="uid://dy1syckxeja68"]
 
 [ext_resource type="Script" uid="uid://c3onaxuajhjbp" path="res://systems/ui/pause_menu/scripts/PauseMenu.gd" id="1_w4887"]
+[ext_resource type="Theme" uid="uid://bsbjx34pneovs" path="res://core/resources/default_theme.tres" id="2_og6fb"]
 
-[node name="PauseMenu" type="CanvasLayer"]
+[node name="PauseMenu" type="CanvasLayer" node_paths=PackedStringArray("resume_button", "options_button", "quit_to_menu_button")]
+process_mode = 3
 layer = 100
 script = ExtResource("1_w4887")
+resume_button = NodePath("CenterContainer/VBoxContainer/ResumeButton")
+options_button = NodePath("CenterContainer/VBoxContainer/OptionsButton")
+quit_to_menu_button = NodePath("CenterContainer/VBoxContainer/QuitButton")
 
-[node name="Background" type="Panel" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="ResumeButton" type="Button" parent="VBoxContainer"]
+[node name="Background" type="Panel" parent="CenterContainer"]
+custom_minimum_size = Vector2(200, 200)
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme = ExtResource("2_og6fb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="ResumeButton" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_og6fb")
 text = "Resume"
 
-[node name="OptionsButton" type="Button" parent="VBoxContainer"]
+[node name="OptionsButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_og6fb")
 text = "Options"
 
-[node name="QuitButton" type="Button" parent="VBoxContainer"]
+[node name="QuitButton" type="Button" parent="CenterContainer/VBoxContainer"]
 layout_mode = 2
+theme = ExtResource("2_og6fb")
 text = "Quit To Menu"

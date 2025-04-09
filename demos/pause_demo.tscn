@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgavf4yykvrif"]
+
+[ext_resource type="PackedScene" uid="uid://dy1syckxeja68" path="res://systems/ui/pause_menu/scenes/sys_pause_menu.tscn" id="1_smj67"]
+[ext_resource type="Script" uid="uid://ccrs7k5gfr0ys" path="res://demos/PauseDemo/color_rect.gd" id="2_hl7li"]
+
+[node name="PauseDemo" type="Node2D"]
+
+[node name="PauseMenu" parent="." instance=ExtResource("1_smj67")]
+visible = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="Camera2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0, 1, 1, 1)
+script = ExtResource("2_hl7li")
