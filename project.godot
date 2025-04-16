@@ -18,6 +18,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 InputHandler="*res://core/autoloads/InputHandler/InputHandler.gd"
+AudioManager="*res://core/autoloads/AudioManager/AudioManager.gd"
+SaveLite="*res://core/autoloads/SaveSystem/SaveLite/SaveLite.gd"
 
 [rendering]
 
