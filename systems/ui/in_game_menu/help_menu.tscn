@@ -1,0 +1,136 @@
+[gd_scene load_steps=6 format=3 uid="uid://brd1hdblvje6m"]
+
+[ext_resource type="Texture2D" uid="uid://ceko50b2jkht5" path="res://UX_Sprite.png" id="1_jxmkk"]
+[ext_resource type="FontFile" uid="uid://d4a6stgcu2hxo" path="res://Fonts/Inter-Black.otf" id="2_rtr1j"]
+[ext_resource type="FontFile" uid="uid://dl7xaw81vyixy" path="res://Fonts/Inter-Medium.otf" id="3_54252"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dpq86"]
+texture = ExtResource("1_jxmkk")
+region_rect = Rect2(1227, 1012, 65, 73)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l8h7b"]
+texture = ExtResource("1_jxmkk")
+region_rect = Rect2(1227, 911, 65, 73)
+
+[node name="helpMenu" type="MarginContainer"]
+visible = false
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = -10
+theme_override_constants/margin_right = -1
+theme_override_constants/margin_bottom = -9
+
+[node name="background" type="NinePatchRect" parent="."]
+custom_minimum_size = Vector2(700, 500)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_jxmkk")
+region_rect = Rect2(20, 141, 201, 200)
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 60
+
+[node name="bodyArea" type="VBoxContainer" parent="background"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -325.0
+offset_top = -172.0
+offset_right = 325.0
+offset_bottom = 172.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+
+[node name="Control" type="Control" parent="background/bodyArea"]
+layout_mode = 2
+
+[node name="NinePatchRect" type="NinePatchRect" parent="background/bodyArea"]
+custom_minimum_size = Vector2(650, 340)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("1_jxmkk")
+region_rect = Rect2(22, 367, 151, 151)
+patch_margin_left = 30
+patch_margin_top = 30
+patch_margin_right = 30
+patch_margin_bottom = 60
+
+[node name="title" type="HBoxContainer" parent="."]
+visible = false
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="Control" type="Control" parent="title"]
+layout_mode = 2
+
+[node name="title" type="VBoxContainer" parent="title"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="Control" type="Control" parent="title/title"]
+layout_mode = 2
+
+[node name="howtoDisplay" type="Label" parent="title/title"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.313726, 0.121569, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.764706)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_constants/shadow_outline_size = 24
+theme_override_fonts/font = ExtResource("2_rtr1j")
+theme_override_font_sizes/font_size = 44
+text = "How to play"
+
+[node name="body" type="MarginContainer" parent="."]
+visible = false
+custom_minimum_size = Vector2(650, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 35
+theme_override_constants/margin_right = 46
+
+[node name="body" type="VBoxContainer" parent="body"]
+layout_mode = 2
+theme_override_constants/separation = 13
+
+[node name="howtoDisplay" type="Label" parent="body/body"]
+custom_minimum_size = Vector2(600, 275)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("3_54252")
+theme_override_font_sizes/font_size = 19
+text = "This must contain but is not limited to: Keybindings, goals, general rules and the aim of the game.
+
+This should be the only place a player needs to view to understand how the game works.
+"
+autowrap_mode = 3
+
+[node name="exitButton" type="VBoxContainer" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="exitButton"]
+layout_mode = 2
+theme_override_constants/margin_top = 27
+theme_override_constants/margin_right = 19
+
+[node name="toggleHelpMenu" type="Button" parent="exitButton/MarginContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 0
+theme_override_styles/hover = SubResource("StyleBoxTexture_dpq86")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dpq86")
+theme_override_styles/normal = SubResource("StyleBoxTexture_l8h7b")

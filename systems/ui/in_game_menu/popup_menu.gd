@@ -71,3 +71,11 @@ func _on_toggle_help_menu_pressed():
 func _on_toggle_options_menu_pressed():
 	
 	toggle_visibility(options_menu_screen)
+
+
+func _on_main_menu_button_pressed() -> void:
+	get_tree().change_scene_to_file("main_menu.tscn")
+
+
+func _on_quit_button_pressed():
+	get_tree().quit()

@@ -10,8 +10,8 @@ config_version=5
 
 [application]
 
-config/name="UX"
-run/main_scene="uid://c2bscbctunfpl"
+config/name="Template_Project"
+run/main_scene="uid://d0umli82kymlc"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
