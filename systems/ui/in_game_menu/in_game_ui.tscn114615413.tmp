@@ -1753,8 +1753,7 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_dpq86")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_dpq86")
 theme_override_styles/normal = SubResource("StyleBoxTexture_l8h7b")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="popupMenu"]
-root_node = NodePath("../..")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
 &"": SubResource("AnimationLibrary_0qsvx")
 }
